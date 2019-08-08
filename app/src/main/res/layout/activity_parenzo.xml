@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+            android:text="David Parenzo"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:layout_height="wrap_content" android:id="@+id/title"/>
+    <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp" app:srcCompat="@drawable/unpressed" android:id="@+id/staizitto"
+            android:scaleType="centerCrop"/>
+    <TextView
+            android:text="STAI ZITTO"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content" android:id="@+id/staizitto_label"/>
+</LinearLayout>
