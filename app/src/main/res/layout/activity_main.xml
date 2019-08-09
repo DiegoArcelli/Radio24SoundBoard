@@ -23,26 +23,26 @@
             android:id="@+id/giannnino" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="40dp" android:layout_marginStart="40dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.114"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.147"/>
     <ImageButton
             android:layout_width="145dp"
             android:layout_height="131dp" app:srcCompat="@drawable/barisoni"
             android:id="@+id/barisoni" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="40dp" android:layout_marginStart="40dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.41"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.443"/>
     <ImageButton
             android:layout_width="145dp"
             android:layout_height="131dp" app:srcCompat="@drawable/cruciani"
             android:id="@+id/cruciani" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="228dp" android:layout_marginStart="228dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.41"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.443"/>
     <ImageButton
             android:layout_width="145dp"
             android:layout_height="131dp" app:srcCompat="@drawable/parenzo"
             android:id="@+id/parenzo" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="228dp" android:layout_marginStart="228dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.114"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.147"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
