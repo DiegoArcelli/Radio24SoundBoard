@@ -62,6 +62,20 @@ class ParenzoActivity : AppCompatActivity() {
             return@OnTouchListener true
         })
 
+        coglioneButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    coglioneButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    coglioneButton.setImageResource(R.drawable.unpressed)
+                    val mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.leieuncoglione)
+                    mp.start()
+                }
+            }
+            return@OnTouchListener true
+        })
+
 
     }
 

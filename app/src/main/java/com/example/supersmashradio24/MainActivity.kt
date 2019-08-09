@@ -10,11 +10,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //this.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        var parenzoButton = findViewById(R.id.parenzo) as ImageButton
+        val parenzoButton = findViewById(R.id.parenzo) as ImageButton
+        val gianninoButton = findViewById(R.id.giannnino) as ImageButton
+
+        gianninoButton.setOnClickListener {
+            val oscar = Intent(applicationContext,GianninoActivity::class.java)
+            startActivity(oscar)
+        }
         parenzoButton.setOnClickListener {
             val david = Intent(applicationContext,ParenzoActivity::class.java)
             startActivity(david)
         }
+
     }
 }
