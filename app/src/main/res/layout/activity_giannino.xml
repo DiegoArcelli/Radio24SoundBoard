@@ -1,52 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent" android:id="@+id/linearLayout2">
-
-    <TextView
-            android:text="TACI MISERABILE"
-            android:layout_width="140dp"
-            android:textAlignment="center"
-            android:layout_height="70dp" android:id="@+id/tacimiserabile_label"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="34dp"
-            android:layout_marginStart="34dp"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/tacimiserabile"/>
-    <TextView
-            android:text="E' UNO STATO LADRO"
-            android:layout_width="140dp"
-            android:textAlignment="center"
-            android:layout_height="70dp" android:id="@+id/statoladro_label"
-            android:textSize="20sp"
-            android:layout_marginEnd="34dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="34dp"
-            app:layout_constraintTop_toBottomOf="@+id/statoladro"/>
-    <ImageButton
-            android:layout_width="120dp"
-            android:layout_height="120dp" android:id="@+id/statoladro"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="90dp"
-            app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
-            android:layout_marginEnd="44dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="44dp"/>
-    <ImageButton
-            android:layout_width="120dp"
-            android:layout_height="120dp" android:id="@+id/tacimiserabile"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="90dp"
-            app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
-            android:layout_marginStart="44dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="44dp"/>
-    <TextView
-            android:text="Oscar Giannino"
-            android:layout_width="400dp"
-            android:textAlignment="center"
-            android:textSize="26sp"
-            android:layout_height="45dp" android:id="@+id/title"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-    />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/linearLayout2">
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/stronzamenzogna"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="280dp"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginStart="44dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="44dp"/>
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/cacciati"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginStart="44dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="44dp" android:layout_marginTop="470dp"/>
+            <TextView
+                    android:text="TACI MISERABILE"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/tacimiserabile_label"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tacimiserabile"/>
+            <TextView
+                    android:text="STRONZA MENZOGNA"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/stronzamenzogna_label"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/stronzamenzogna"/>
+            <TextView
+                    android:text="CACCIATI"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/cacciati_label"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/cacciati"/>
+            <TextView
+                    android:text="E' UNO STATO LADRO"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/statoladro_label"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="34dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="34dp"
+                    app:layout_constraintTop_toBottomOf="@+id/statoladro"/>
+            <TextView
+                    android:text="PAESE FASCISTA"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/paesefascista_label"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="34dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="34dp"
+                    app:layout_constraintTop_toBottomOf="@+id/paesefascista"/>
+            <TextView
+                    android:text="LADRERIA"
+                    android:layout_width="140dp"
+                    android:textAlignment="center"
+                    android:layout_height="70dp" android:id="@+id/ladreria_label"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="34dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="34dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ladreria"/>
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/statoladro"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="90dp"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginEnd="44dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="44dp"/>
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/paesefascista"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="280dp"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginEnd="44dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="44dp"/>
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/ladreria"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="470dp"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginEnd="44dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="44dp"/>
+            <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/tacimiserabile"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="90dp"
+                    app:layout_constraintTop_toTopOf="parent" android:background="@drawable/unpressed"
+                    android:layout_marginStart="44dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="44dp"/>
+            <TextView
+                    android:text="Oscar Giannino"
+                    android:layout_width="400dp"
+                    android:textAlignment="center"
+                    android:textSize="26sp"
+                    android:layout_height="45dp" android:id="@+id/title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

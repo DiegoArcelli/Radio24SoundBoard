@@ -10,15 +10,19 @@
             android:screenOrientation="portrait"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ParenzoActivity" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".GianninoActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ParenzoActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name=".GianninoActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name=".CrucianiActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name=".BarisoniActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name=".MauroActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name=".ZanzaraActivity" android:parentActivityName=".MainActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

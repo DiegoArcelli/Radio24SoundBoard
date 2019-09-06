@@ -19,6 +19,13 @@ class ParenzoActivity : AppCompatActivity() {
         val bastaButton = findViewById(R.id.basta) as ImageButton
         val coglioneButton = findViewById(R.id.coglione) as ImageButton
         val pagatodaassadButton = findViewById(R.id.pagatodaassad) as ImageButton
+        val tiportoviatuttoButton = findViewById(R.id.tiportoviatutto) as ImageButton
+        val perchihavotatoButton = findViewById(R.id.perchihavotato) as ImageButton
+        val vaffanculoButton = findViewById(R.id.vaffanculo) as ImageButton
+        var mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.staizitto)
+        var mpm : MediaPlayerManager = MediaPlayerManager(applicationContext)
+
+
 
         staizittoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
@@ -27,8 +34,7 @@ class ParenzoActivity : AppCompatActivity() {
                 }
                 MotionEvent.ACTION_UP -> {
                     staizittoButton.setImageResource(R.drawable.unpressed)
-                    val mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.staizitto)
-                    mp.start()
+                    mpm.playTrack(R.raw.staizitto)
                 }
             }
             return@OnTouchListener true
@@ -41,8 +47,7 @@ class ParenzoActivity : AppCompatActivity() {
                 }
                 MotionEvent.ACTION_UP -> {
                     bastaButton.setImageResource(R.drawable.unpressed)
-                    val mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.basta)
-                    mp.start()
+                    mpm.playTrack(R.raw.basta)
                 }
             }
             return@OnTouchListener true
@@ -55,8 +60,7 @@ class ParenzoActivity : AppCompatActivity() {
                 }
                 MotionEvent.ACTION_UP -> {
                     pagatodaassadButton.setImageResource(R.drawable.unpressed)
-                    val mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.pagatodaassad)
-                    mp.start()
+                    mpm.playTrack(R.raw.pagatodaassad)
                 }
             }
             return@OnTouchListener true
@@ -69,8 +73,47 @@ class ParenzoActivity : AppCompatActivity() {
                 }
                 MotionEvent.ACTION_UP -> {
                     coglioneButton.setImageResource(R.drawable.unpressed)
-                    val mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.leieuncoglione)
-                    mp.start()
+                    mpm.playTrack(R.raw.leieuncoglione)
+                }
+            }
+            return@OnTouchListener true
+        })
+
+
+        tiportoviatuttoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    tiportoviatuttoButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    tiportoviatuttoButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.tiportoviatutto)
+                }
+            }
+            return@OnTouchListener true
+        })
+
+        perchihavotatoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    perchihavotatoButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    perchihavotatoButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.perchihavotato)
+                }
+            }
+            return@OnTouchListener true
+        })
+
+        vaffanculoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    vaffanculoButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    vaffanculoButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.vaffanculo)
                 }
             }
             return@OnTouchListener true
