@@ -1,7 +1,6 @@
 package com.example.supersmashradio24
 
 import android.annotation.SuppressLint
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
@@ -9,6 +8,8 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class ParenzoActivity : AppCompatActivity() {
+
+    lateinit var mpm : MediaPlayerManager
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +23,8 @@ class ParenzoActivity : AppCompatActivity() {
         val tiportoviatuttoButton = findViewById(R.id.tiportoviatutto) as ImageButton
         val perchihavotatoButton = findViewById(R.id.perchihavotato) as ImageButton
         val vaffanculoButton = findViewById(R.id.vaffanculo) as ImageButton
-        var mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.staizitto)
-        var mpm : MediaPlayerManager = MediaPlayerManager(applicationContext)
-
+        val filosofoButton = findViewById(R.id.filosofodeimieicoglioni) as ImageButton
+        mpm = MediaPlayerManager(applicationContext)
 
 
         staizittoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
@@ -119,7 +119,24 @@ class ParenzoActivity : AppCompatActivity() {
             return@OnTouchListener true
         })
 
+        filosofoButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    filosofoButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    filosofoButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.filosofodeimieicoglioni)
+                }
+            }
+            return@OnTouchListener true
+        })
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mpm.stop()
     }
 
 }

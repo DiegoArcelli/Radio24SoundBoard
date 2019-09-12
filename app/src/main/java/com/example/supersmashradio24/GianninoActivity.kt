@@ -2,13 +2,14 @@ package com.example.supersmashradio24
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageButton
 
 class GianninoActivity : AppCompatActivity() {
+
+    lateinit var mpm : MediaPlayerManager
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +23,10 @@ class GianninoActivity : AppCompatActivity() {
         val paesefascistaButton = findViewById(R.id.paesefascista) as ImageButton
         val cacciatiButton = findViewById(R.id.cacciati) as ImageButton
         val ladreriaButton = findViewById(R.id.ladreria) as ImageButton
-        //var mp : MediaPlayer = MediaPlayer.create(applicationContext,R.raw.statoladro)
-        var mpm : MediaPlayerManager = MediaPlayerManager(applicationContext)
+        val mentitoreButton = findViewById(R.id.mentitore) as ImageButton
+        val bruceremolechieseButton = findViewById(R.id.bruceremolechiese) as ImageButton
+        mpm = MediaPlayerManager(applicationContext)
+
 
         tacimiserabileButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
@@ -103,5 +106,37 @@ class GianninoActivity : AppCompatActivity() {
             return@OnTouchListener true
         })
 
+        mentitoreButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    mentitoreButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    mentitoreButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.mentitore)
+                }
+            }
+            return@OnTouchListener true
+        })
+
+        bruceremolechieseButton.setOnTouchListener(View.OnTouchListener { view, motionEvent ->
+            when (motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    bruceremolechieseButton.setImageResource(R.drawable.pressed)
+                }
+                MotionEvent.ACTION_UP -> {
+                    bruceremolechieseButton.setImageResource(R.drawable.unpressed)
+                    mpm.playTrack(R.raw.bruceremolechiese)
+                }
+            }
+            return@OnTouchListener true
+        })
+
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mpm.stop()
+    }
+
 }

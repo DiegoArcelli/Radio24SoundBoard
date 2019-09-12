@@ -15,11 +15,16 @@ class MediaPlayerManager {
         mp = MediaPlayer.create(ctx,R.raw.ladreria)
     }
 
+
     fun playTrack(ind : Int){
         if(mp.isPlaying)
             mp.release()
         mp = MediaPlayer.create(ctx,ind)
         mp.start()
+    }
+    fun stop(){
+        mp.stop()
+        mp.release()
     }
 
 }

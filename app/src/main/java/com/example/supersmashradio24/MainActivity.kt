@@ -1,11 +1,16 @@
 package com.example.supersmashradio24
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
+
+    fun getContex(): Context {
+        return applicationContext
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
